@@ -3,9 +3,12 @@ import * as S from './App.style';
 import SettingBar from '@components/SettingBar/SettingBar';
 import Teams from '@components/Teams/Teams';
 import { useState } from 'react';
+import { ISettingOption } from '@components/SettingBar/SettingBar.interface';
+import { INITIAL_SETTING_OPTIONS } from '@components/SettingBar/SettingBar.const';
 
 function App() {
   const [members, setMembers] = useState<string[]>([]);
+  const [settingOptions, setSettingOptions] = useState<ISettingOption[]>(INITIAL_SETTING_OPTIONS);
 
   return (
     <>
@@ -15,7 +18,7 @@ function App() {
           <Members members={members} setMembers={setMembers} />
         </S.LNB>
         <S.Content>
-          <SettingBar />
+          <SettingBar settingOptions={settingOptions} setSettingOptions={setSettingOptions} />
           <Teams members={members} />
         </S.Content>
       </S.Layout>
