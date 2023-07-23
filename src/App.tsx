@@ -16,7 +16,7 @@ function App() {
         </S.LNB>
         <S.Content>
           <SettingBar />
-          <Teams />
+          <Teams members={members} />
         </S.Content>
       </S.Layout>
     </>
