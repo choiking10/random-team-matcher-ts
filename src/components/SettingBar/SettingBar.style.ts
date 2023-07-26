@@ -16,12 +16,17 @@ export const Li = styled.li`
 `;
 
 export const Radio = styled.div`
+  ${Mixin.flex('flex-start', 'center')};
   input[type='radio']:disabled + label {
     opacity: 0.3;
   }
 
   & * {
     cursor: pointer;
+  }
+
+  & > label {
+    line-height: 25px;
   }
 `;
 

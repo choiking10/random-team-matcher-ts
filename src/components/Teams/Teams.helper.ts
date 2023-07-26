@@ -1,15 +1,8 @@
-export const makeTeams = (members: string[], teamMemberSize: number) => {
-  const teams: string[][] = [];
+export const makeTeams = (members: string[], totalTeamSize: number) => {
+  const teams: string[][] = Array.from(Array(totalTeamSize), () => []);
 
-  members.map((member) => {
-    const lastTeam = teams[teams.length - 1];
-
-    if (lastTeam && lastTeam.length < teamMemberSize) {
-      lastTeam.push(member);
-      return;
-    }
-
-    teams.push([member]);
+  members.forEach((member, idx) => {
+    teams[idx % totalTeamSize].push(member);
   });
 
   return teams;
