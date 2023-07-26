@@ -19,14 +19,7 @@ const SettingBar = ({ settingOptions, setSettingOptions }: IProps) => {
       {settingOptions.map(({ title, checked, id, value }) => (
         <S.Li key={id}>
           <S.Radio>
-            <input
-              disabled={!checked}
-              type="radio"
-              id={id}
-              value={id}
-              checked={checked}
-              onChange={handleChangeOptionType}
-            />
+            <input type="radio" id={id} value={id} checked={checked} onChange={handleChangeOptionType} />
             <label htmlFor={id}>{title}</label>
           </S.Radio>
           <S.Counter selected={checked}>
