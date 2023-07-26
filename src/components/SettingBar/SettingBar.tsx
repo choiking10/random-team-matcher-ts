@@ -20,7 +20,7 @@ const SettingBar = ({ settingOptions, setSettingOptions }: IProps) => {
         <S.Li key={id}>
           <S.Radio>
             <input
-              disabled={true}
+              disabled={!checked}
               type="radio"
               id={id}
               value={id}
@@ -29,12 +29,12 @@ const SettingBar = ({ settingOptions, setSettingOptions }: IProps) => {
             />
             <label htmlFor={id}>{title}</label>
           </S.Radio>
-          <S.Counter selected={false}>
-            <button disabled={true} onClick={handleCounter.bind(null, '-')}>
+          <S.Counter selected={checked}>
+            <button disabled={!checked} onClick={handleCounter.bind(null, '-')}>
               -
             </button>
             <div>{value}</div>
-            <button disabled={true} onClick={handleCounter.bind(null, '+')}>
+            <button disabled={!checked} onClick={handleCounter.bind(null, '+')}>
               +
             </button>
           </S.Counter>

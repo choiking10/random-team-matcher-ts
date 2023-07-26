@@ -12,8 +12,8 @@ const Teams = ({ members }: IProps) => {
 
   const handleClick = () => {
     const shuffledMembers = shuffle(members);
-    const teamMemberSize = 2;
-    const teams = makeTeams(shuffledMembers, teamMemberSize);
+    const totalTeamSize = 2;
+    const teams = makeTeams(shuffledMembers, totalTeamSize);
 
     setTeams(teams);
   };

@@ -3,14 +3,14 @@ import { ISettingOption } from './SettingBar.interface';
 export const INITIAL_SETTING_OPTIONS: ISettingOption[] = [
   {
     title: '전체 팀 수',
-    checked: false,
+    checked: true,
     id: 'team',
-    value: 1,
+    value: 2,
   },
   {
     title: '팀당 멤버 수',
-    checked: true,
+    checked: false,
     id: 'member',
-    value: 2,
+    value: 1,
   },
 ];
