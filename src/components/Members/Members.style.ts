@@ -26,7 +26,7 @@ export const EmptyMembers = styled.div`
   height: calc(100% - ${InputHeight});
 `;
 
-export const Member = styled.li`
+export const MemberWrapper = styled.li`
   ${Mixin.flex('flex-start')};
   ${Mixin.shadow()};
   list-style: none;
@@ -36,6 +36,8 @@ export const Member = styled.li`
   margin-bottom: 12px;
   padding: 0 8px;
 `;
+
+export const Member = styled.div``;
 
 export const Form = styled.form`
   ${Mixin.flex('space-between')}

@@ -26,7 +26,9 @@ const Members = ({ members, setMembers }: IProps) => {
       {members.length > 0 ? (
         <S.Members>
           {members.map((member, index) => (
-            <S.Member key={index}>{member}</S.Member>
+            <S.MemberWrapper key={index} data-member={member}>
+              <S.Member>{member}</S.Member>
+            </S.MemberWrapper>
           ))}
         </S.Members>
       ) : (
