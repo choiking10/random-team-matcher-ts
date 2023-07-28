@@ -17,7 +17,7 @@ export const TeamWrapper = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   height: calc(100% - ${buttonHeight});
-  overflow: scroll;
+  overflow: hidden;
 `;
 
 export const Team = styled.div`

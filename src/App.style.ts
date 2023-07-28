@@ -5,7 +5,7 @@ import { styled } from 'styled-components';
 const titleHeight = '40px';
 
 export const H1 = styled.h1`
-  min-width: 900px;
+  min-width: 1000px;
   ${Mixin.flex('flex-start')};
   padding-left: 12px;
   height: ${titleHeight};
@@ -17,7 +17,7 @@ export const H1 = styled.h1`
 export const Layout = styled.div`
   ${Mixin.flex()};
   height: calc(100% - ${titleHeight});
-  min-width: 900px;
+  min-width: 1000px;
 
   & > * {
     height: 100%;
@@ -25,8 +25,8 @@ export const Layout = styled.div`
 `;
 
 export const LNB = styled.div`
-  width: 300px;
-  min-width: 300px;
+  width: 400px;
+  min-width: 400px;
 `;
 
 export const Content = styled.div`

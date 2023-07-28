@@ -17,7 +17,7 @@ export const MembersWrapper = styled.div`
 
 export const Members = styled.ul`
   height: calc(100% - ${InputHeight});
-  overflow: scroll;
+  overflow: hidden;
   padding-top: 12px;
 `;
 
